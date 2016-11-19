@@ -1,0 +1,6 @@
+{
+    "esversion": 6,
+    "eqeqeq": true,
+    "laxcomma": false,
+    "node": true
+}

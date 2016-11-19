@@ -1,0 +1,28 @@
+{
+  "name": "ran-gen",
+  "version": "1.0.0",
+  "description": "Generates a random set of characters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spazmoe06/ran-gen.git"
+  },
+  "keywords": [
+    "random",
+    "generator",
+    "characters"
+  ],
+  "author": "Sean McCrory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spazmoe06/ran-gen/issues"
+  },
+  "homepage": "https://github.com/Spazmoe06/ran-gen#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0"
+  }
+}
