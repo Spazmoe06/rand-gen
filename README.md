@@ -1,2 +1,2 @@
-# ran-gen
+# rand-gen
 Random character generator.
