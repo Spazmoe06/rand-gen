@@ -1,4 +1,8 @@
 {
+    "predef": [
+        "describe",
+        "it"
+    ],
     "esversion": 6,
     "eqeqeq": true,
     "laxcomma": false,
