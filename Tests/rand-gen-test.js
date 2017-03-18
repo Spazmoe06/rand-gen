@@ -168,10 +168,10 @@ describe("Test rand-gen", () => {
         });
         it("should not allow an isogram's length to be larger then the pool of characters, should throw error", (done) => {
             expect(function () {
-                randGen({length: 110}).isogram()
+                randGen({length: 110}).isogram();
             }).to.throw(Error, "Invalid length for isogram (110 chars). Length option cannot be greater than the total number of characters in the pool (94 chars).");
             done();
-        })
+        });
     });
     describe("char function", () => {
         it("should return a single character", (done) => {
