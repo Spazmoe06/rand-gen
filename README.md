@@ -113,6 +113,9 @@ randGen().noDups();
 randGen().char();
 ```
 
+
+[1]: http://npmjs.org
+
 ## License MIT
 
 MIT License
