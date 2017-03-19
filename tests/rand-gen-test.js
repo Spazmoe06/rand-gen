@@ -158,18 +158,18 @@ describe("Test rand-gen", () => {
             done();
         });
     });
-    describe("isogram function", () => {
+    describe("noDups function", () => {
         it("should not contain any repeating values", (done) => {
-            const randString = randGen({length: 50}).isogram();
+            const randString = randGen({length: 50}).noDups();
             const foundRepeat = (/([a-zA-Z0-9\!\@\#\$\%\^\&\*\(\)\_\-\+\=\;\:\{\}\[\]\"\'<\>\,\.\\\/\|\~\`\?]).*?\1/).test(randString);
 
             foundRepeat.should.equal(false);
             done();
         });
-        it("should not allow an isogram's length to be larger then the pool of characters, should throw error", (done) => {
+        it("should not allow the strings length to be larger then the pool of characters, should throw error", (done) => {
             expect(function () {
-                randGen({length: 110}).isogram();
-            }).to.throw(Error, "Invalid length for isogram (110 chars). Length option cannot be greater than the total number of characters in the pool (94 chars).");
+                randGen({length: 110}).noDups();
+            }).to.throw(Error, "Invalid length for non duplicate string (110 chars). Length option cannot be greater than the total number of characters in the pool (94 chars).");
             done();
         });
     });
