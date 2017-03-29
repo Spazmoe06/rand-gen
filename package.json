@@ -1,5 +1,5 @@
 {
-  "name": "ran-gen",
+  "name": "rand-gen",
   "version": "1.0.0",
   "description": "Generates a random set of characters.",
   "main": "index.js",
