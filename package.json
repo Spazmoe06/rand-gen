@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Spazmoe06/ran-gen.git"
+    "url": "git+https://github.com/Spazmoe06/rand-gen.git"
   },
   "keywords": [
     "random",
@@ -18,9 +18,9 @@
   "author": "Sean McCrory",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Spazmoe06/ran-gen/issues"
+    "url": "https://github.com/Spazmoe06/rand-gen/issues"
   },
-  "homepage": "https://github.com/Spazmoe06/ran-gen#readme",
+  "homepage": "https://github.com/Spazmoe06/rand-gen#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "grunt": "^1.0.1",
