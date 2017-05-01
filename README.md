@@ -12,7 +12,7 @@ Version: 1.0.0
 To use `rand-gen` require it into your file and call `.gen()`.
 
 ``` js
-var randGen = require('rqand-gen');
+var randGen = require('rand-gen');
 
 var myFunction = function () {
     var randStr = randGen().gen();
