@@ -93,9 +93,9 @@ The `.number()` will generate a string of numbers it can also return a base 10 i
 * `Boolean` - Passing a boolean value of true will return a base 10 integer instead of a string.
 * `Number` or `String` - You may pass a number or a string representation of a number between 2 and 36 will return a string number in that base.
 ``` js
-randGen().number(); // Will be a string of a base 10 numbers "012345678901234"
-randGen().number(true); // Will return an integer number 123456789012345
-randGen().number(16); // Will return a hexadecimal number "123456789abcdef"
+randGen().number(); // Will be a string of a base 10 numbers like "012345678901234"
+randGen().number(true); // Will return an integer number like 123456789012345
+randGen().number(16); // Will return a hexadecimal number like "123456789abcdef"
 ```
 
 
@@ -106,9 +106,9 @@ randGen().spChars();
 ```
 
 ### noDups Function
-If the `.noDups()` function is called the resulting string will not have any character doubled in it.
+If the `.noDups()` function is called, no two of the same characters will be in the resulting string. Be sure your length does not exceed the amount of total characters in the pool. By default there are 96 characters so don't make your length 97.
 ``` js
-randGen().noDups();
+randGen().noDups(); // Returns something like "asdfg1bD6m%0Vq3"
 ```
 
 ### Single Character Function
