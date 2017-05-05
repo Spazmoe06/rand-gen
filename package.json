@@ -13,7 +13,14 @@
   "keywords": [
     "random",
     "generator",
-    "characters"
+    "characters",
+    "char",
+    "generation",
+    "numbers",
+    "util",
+    "utils",
+    "key"
+    "string"
   ],
   "author": "Sean McCrory",
   "license": "MIT",

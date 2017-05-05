@@ -89,9 +89,13 @@ randGen().alpha.uppercase();
 ### Number Function
 
 The `.number()` will generate a string of numbers it can also return a base 10 integer if you pass true into the function.
+#### Acceptable parameter
+* `Boolean` - Passing a boolean value of true will return a base 10 integer instead of a string.
+* `Number` or `String` - You may pass a number or a string representation of a number between 2 and 36 will return a string number in that base.
 ``` js
-randGen().number(); // Will be a string of numbers "012345678901234"
-randGen().number(true); // Will return  an actual number 123456789012345
+randGen().number(); // Will be a string of a base 10 numbers "012345678901234"
+randGen().number(true); // Will return an integer number 123456789012345
+randGen().number(16); // Will return a hexadecimal number "123456789abcdef"
 ```
 
 

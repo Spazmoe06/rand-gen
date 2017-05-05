@@ -3,6 +3,7 @@
 const randGen = require("../lib/rand-gen");
 const should = require('chai').should();
 const expect = require('chai').expect;
+const assert = require('chai').assert;
 
 const allDefaultsChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=;:{}[]\"'<>,.\\/|~`?";
 
@@ -106,8 +107,63 @@ describe("Test rand-gen", () => {
             done();
         });
         it("should be able to return a number type", (done) => {
-            const randString = randGen().number(true);
-            randString.should.be.a("number");
+            const randNumber = randGen().number(true);
+            randNumber.should.be.a("number");
+            done();
+        });
+        it("should return a number with a radix of 2", (done) => {
+            const  randString = randGen().number(2);
+
+            const foundNumbers = (/([0-1]).*?/).test(randString);
+            const foundOtherChars = (/([a-zA-Z2-9\!\@\#\$\%\^\&\*\(\)\_\-\+\=\;\:\{\}\[\]\"\'<\>\,\.\\\/\|\~\`\?]).*?/).test(randString);
+
+            randString.should.be.a("string");
+            randString.should.have.lengthOf(15);
+            foundNumbers.should.equal(true);
+            foundOtherChars.should.equal(false);
+
+            done();
+        });
+        it("should return a number with a radix of 16", (done) => {
+            const  randString = randGen().number(16);
+
+            const foundNumbers = (/([0-9a-f]).*?/).test(randString);
+            const foundOtherChars = (/([g-zA-Z\!\@\#\$\%\^\&\*\(\)\_\-\+\=\;\:\{\}\[\]\"\'<\>\,\.\\\/\|\~\`\?]).*?/).test(randString);
+
+            randString.should.be.a("string");
+            randString.should.have.lengthOf(15);
+            foundNumbers.should.equal(true);
+            foundOtherChars.should.equal(false);
+
+            done();
+        });
+        it("should return a number with a radix of 36", (done) => {
+            const  randString = randGen().number(16);
+
+            const foundNumbers = (/([0-9a-z]).*?/).test(randString);
+            const foundOtherChars = (/([A-Z\!\@\#\$\%\^\&\*\(\)\_\-\+\=\;\:\{\}\[\]\"\'<\>\,\.\\\/\|\~\`\?]).*?/).test(randString);
+
+            randString.should.be.a("string");
+            randString.should.have.lengthOf(15);
+            foundNumbers.should.equal(true);
+            foundOtherChars.should.equal(false);
+
+            done();
+        });
+        it("should throw an error if a radix is less than 2", (done) => {
+            assert.throws(randGen().number.bind(randGen().number, 1), Error, "Radix for the number can not be greater than 36 or less than 2");
+            done();
+        });
+        it("should throw an error if a radix is greater than 36", (done) => {
+            assert.throws(randGen().number.bind(randGen().number, 37), Error, "Radix for the number can not be greater than 36 or less than 2");
+            done();
+        });
+        it("should throw an error if a letter is detected in the function parameter", (done) => {
+            assert.throws(randGen().number.bind(randGen().number, "1a"), Error, "Invalid parameter type. Please pass a boolean value or number between 2 and 36.");
+            done();
+        });
+        it("should throw an error if the function parameter is of the wrong type", (done) => {
+            assert.throws(randGen().number.bind(randGen().number, []), Error, "Invalid parameter type. Please pass a boolean value or number between 2 and 36.");
             done();
         });
     });
