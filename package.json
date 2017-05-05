@@ -12,14 +12,20 @@
   },
   "keywords": [
     "random",
+    "randomized",
+    "rand",
+    "rand-gen",
+    "gen",
     "generator",
+    "generation",
     "characters",
     "char",
-    "generation",
+    "alpha",
+    "alpha-numeric",
     "numbers",
     "util",
     "utils",
-    "key"
+    "key",
     "string"
   ],
   "author": "Sean McCrory",
