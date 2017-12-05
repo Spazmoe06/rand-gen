@@ -33,7 +33,7 @@ The above function will produce a random string that can include all letters a-z
 
 ### Options Usages
 ``` js
-var randGen = require('rqand-gen');
+var randGen = require('rand-gen');
 
 var myFunction1 = function () {
     var randStr = randGen({
