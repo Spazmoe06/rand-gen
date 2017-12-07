@@ -2,7 +2,7 @@
   "name": "rand-gen",
   "version": "1.0.2",
   "description": "Generates a random set of characters.",
-  "main": "index.js",
+  "main": "lib/rand-gen",
   "scripts": {
     "test": "mocha tests/**.js"
   },
